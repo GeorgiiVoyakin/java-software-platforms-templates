@@ -16,9 +16,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             size = set.size();
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return size;
     }
@@ -29,9 +30,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             isEmpty = set.isEmpty();
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return isEmpty;
     }
@@ -42,9 +44,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             contains = set.contains(o);
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return contains;
     }
@@ -55,9 +58,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             iterator = set.iterator();
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         assert iterator != null;
         return iterator;
@@ -69,9 +73,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             array = set.toArray();
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return array;
     }
@@ -83,9 +88,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             array = set.toArray((Object[]) a);
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return (T[]) array;
     }
@@ -96,9 +102,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             add = set.add(e);
-            semaphore.release();
         } catch (InterruptedException interruptedException) {
             interruptedException.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return add;
     }
@@ -109,9 +116,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             remove = set.remove(o);
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return remove;
     }
@@ -122,9 +130,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             containsAll = set.containsAll(c);
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return containsAll;
     }
@@ -135,9 +144,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             addAll = set.addAll(c);
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return addAll;
     }
@@ -148,9 +158,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             retainAll = set.retainAll(c);
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return retainAll;
     }
@@ -161,9 +172,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             removeAll = set.removeAll(c);
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
         return removeAll;
     }
@@ -173,9 +185,10 @@ public class SemaphoreSet<E> implements Set<E> {
         try {
             semaphore.acquire();
             set.clear();
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            semaphore.release();
         }
     }
 }
