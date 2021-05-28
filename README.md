@@ -33,10 +33,10 @@ Java programming tasks for institute
 
 ## Task 11
 Создать приложение с использованием [Spring Boot Starter Initializr](https://start.spring.io/) с такими зависимостями: 
-*Spring Web
-*Lombok
-*Validation
-*Spring boot Actuator
+* Spring Web
+* Lombok
+* Validation
+* Spring boot Actuator
 Запустить приложение и удостовериться, что не появилось никаких ошибок. Добавить все эндпоинты в Actuator, сделать HTTP-запрос на проверку состояния приложения. Собрать jar-файл приложения, запустить и проверить состояние при помощи REST-запроса.
 
 ## Task 12
